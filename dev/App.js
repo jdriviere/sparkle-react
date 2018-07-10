@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import 'sparkle.css/dist/css/sparkle.min.css';
-import Button from './Button';
-import Buttons from './Buttons';
-import Tag from './Tag';
-import Tags from './Tags';
+import Alert from '../src/Alert';
+import Button from '../src/Button';
+import Buttons from '../src/Buttons';
+import Tag from '../src/Tag';
+import Tags from '../src/Tags';
 import './App.css';
 
 class App extends Component {
@@ -12,17 +13,35 @@ class App extends Component {
         return(
             <div className="wrapper">
                 <div className="App">
-                    <h1>Hello, World!</h1>
+                    <div class="App__section">
+                        <h1>Hello, World!</h1>
 
-                    <Tags>
-                        <Tag primary>New!</Tag>
-                        <Tag dark>v1.0.0</Tag>
-                    </Tags>
+                        <Tags>
+                            <Tag primary>Re-Spark</Tag>
+                            <Tag dark>v1.0.0</Tag>
+                            <Tag success>New!</Tag>
+                        </Tags>
 
-                    <p>
-                        This basic application presents the barebones of a React app, and uses
-                        &nbsp;<span className="tag">Sparkle.CSS</span> as its base styling.
-                    </p>
+                        <h5>
+                            A series of React.js modules that allow you to implement
+                            the <Tag>Sparkle.CSS</Tag> framework for styling web pages
+                            and web applications.
+                        </h5>
+                    </div>
+
+                    <Buttons>
+                        <Button primary large>
+                            <i class="fa fa-upload"></i>
+                            &nbsp;Download
+                        </Button>
+                        <Button dark outline large>
+                            <i class="fa fa-book"></i>
+                            &nbsp;Read the Docs
+                        </Button>
+                    </Buttons>
+
+                    <br/>
+                    <AlertGroup/>
 
                     <br/>
                     <ButtonGroup/>
@@ -30,6 +49,32 @@ class App extends Component {
                     <TagGroup/>
                     
                 </div>
+            </div>
+        );
+    }
+}
+
+class AlertGroup extends React.Component {
+    render() {
+        return (
+            <div>
+                <h5>Alerts:</h5>
+                <Alert>Alert</Alert>
+                <Alert primary>Alert</Alert>
+                <Alert info>Alert</Alert>
+                <Alert success>Alert</Alert>
+                <Alert warning>Alert</Alert>
+                <Alert danger>Alert</Alert>
+                <Alert light>Alert</Alert>
+                <Alert dark>Alert</Alert>
+                <br/>
+                <Alert outline primary>Alert</Alert>
+                <Alert outline info>Alert</Alert>
+                <Alert outline success>Alert</Alert>
+                <Alert outline warning>Alert</Alert>
+                <Alert outline danger>Alert</Alert>
+                <Alert outline light>Alert</Alert>
+                <Alert outline dark>Alert</Alert>
             </div>
         );
     }

@@ -1,8 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App.js';
-
-ReactDOM.render(
-    <App/>,
-    document.getElementById('app')
-);
+export { Alert } from './Alert';
+export { Button } from './Button';
+export { Buttons } from './Buttons';
+export { Tag } from './Tag';
+export { Tags } from './Tags';
