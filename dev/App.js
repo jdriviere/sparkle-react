@@ -17,7 +17,7 @@ class App extends Component {
                         <h1>Hello, World!</h1>
 
                         <Tags>
-                            <Tag primary>Re-Spark</Tag>
+                            <Tag primary>ReSpark</Tag>
                             <Tag dark>v1.0.0</Tag>
                             <Tag success>New!</Tag>
                         </Tags>
@@ -31,7 +31,7 @@ class App extends Component {
 
                     <Buttons>
                         <Button primary large>
-                            <i class="fa fa-upload"></i>
+                            <i class="fa fa-download"></i>
                             &nbsp;Download
                         </Button>
                         <Button dark outline large>
@@ -42,7 +42,6 @@ class App extends Component {
 
                     <br/>
                     <AlertGroup/>
-
                     <br/>
                     <ButtonGroup/>
                     <br/>
