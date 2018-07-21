@@ -26,7 +26,7 @@ const Alert = ({
     }, className);
 
     return (
-        <div className={ classes }>
+        <div className = { classes }>
             { children }
         </div>
     );
