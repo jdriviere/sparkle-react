@@ -106,7 +106,7 @@ class ButtonGroup extends React.Component {
                     <Button light disabled>Button</Button>
                     <Button dark disabled>Button</Button>
                 </Buttons>
-                <Buttons style={{background:'#ADD2E6', padding: 10}}>
+                <Buttons style={{background:'#333639', padding: 10}}>
                     <Button primary reverse>Button</Button>
                     <Button info reverse>Button</Button>
                     <Button success reverse>Button</Button>
@@ -115,7 +115,25 @@ class ButtonGroup extends React.Component {
                     <Button light reverse>Button</Button>
                     <Button dark reverse>Button</Button>
                 </Buttons>
-                <Buttons style={{background:'#ADD2E6', padding: 10}}>
+                <Buttons style={{background:'#333639', padding: 10}}>
+                    <Button primary outline>Button</Button>
+                    <Button info outline>Button</Button>
+                    <Button success outline>Button</Button>
+                    <Button warning outline>Button</Button>
+                    <Button danger outline>Button</Button>
+                    <Button light outline>Button</Button>
+                    <Button dark outline>Button</Button>
+                </Buttons>
+                <Buttons style={{background:'#333639', padding: 10}}>
+                    <Button primary reverse outline>Button</Button>
+                    <Button info reverse outline>Button</Button>
+                    <Button success reverse outline>Button</Button>
+                    <Button warning reverse outline>Button</Button>
+                    <Button danger reverse outline>Button</Button>
+                    <Button light reverse outline>Button</Button>
+                    <Button dark reverse outline>Button</Button>
+                </Buttons>
+                <Buttons style={{background:'#333639', padding: 10}}>
                     <Button primary ghost>Button</Button>
                     <Button info ghost>Button</Button>
                     <Button success ghost>Button</Button>
@@ -124,7 +142,7 @@ class ButtonGroup extends React.Component {
                     <Button light ghost>Button</Button>
                     <Button dark ghost>Button</Button>
                 </Buttons>
-                <Buttons style={{background:'#0012E5', padding: 10}}>
+                <Buttons style={{background:'#333639', padding: 10}}>
                     <Button primary link>Button</Button>
                     <Button info link>Button</Button>
                     <Button success link>Button</Button>
@@ -169,7 +187,7 @@ class TagGroup extends React.Component {
                     <Tag light>Tag</Tag>
                     <Tag dark>Tag</Tag>
                 </Tags>
-                <Tags>
+                <Tags style={{background: '#333639', padding: 10}}>
                     <Tag primary reverse>Tag</Tag>
                     <Tag info reverse>Tag</Tag>
                     <Tag success reverse>Tag</Tag>
@@ -178,7 +196,7 @@ class TagGroup extends React.Component {
                     <Tag light reverse>Tag</Tag>
                     <Tag dark reverse>Tag</Tag>
                 </Tags>
-                <Tags>
+                <Tags style={{background: '#333639', padding: 10}}>
                     <Tag primary outline>Tag</Tag>
                     <Tag info outline>Tag</Tag>
                     <Tag success outline>Tag</Tag>
