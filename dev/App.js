@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
+
 import Alert from '../src/Alert';
 import Blockquote from '../src/Blockquote';
 import Button from '../src/Button';
 import Buttons from '../src/Buttons';
 import Tag from '../src/Tag';
 import Tags from '../src/Tags';
+
+import Card from '../src/Card';
+
 import './App.css';
 
 class App extends Component {
@@ -13,7 +17,7 @@ class App extends Component {
         return(
             <div className="wrapper">
                 <div className="App">
-                    <div class="App__section">
+                    <div className="App__section">
                         <h1>Hello, World!</h1>
 
                         <Tags>
@@ -31,11 +35,11 @@ class App extends Component {
 
                     <Buttons>
                         <Button primary large>
-                            <i class="fa fa-download"></i>
+                            <i className="fa fa-download"></i>
                             &nbsp;Download
                         </Button>
                         <Button dark outline large>
-                            <i class="fa fa-book"></i>
+                            <i className="fa fa-book"></i>
                             &nbsp;Read the Docs
                         </Button>
                     </Buttons>
@@ -48,6 +52,9 @@ class App extends Component {
                     <ButtonGroup/>
                     <br/>
                     <TagGroup/>
+
+                    <br/><br/>
+                    <CardGroup/>
                     
                 </div>
             </div>
@@ -166,6 +173,7 @@ class ButtonGroup extends React.Component {
                 <Buttons solid>
                     <Button>Button</Button>
                     <Button>Button</Button>
+                    <Button>Button</Button>
                 </Buttons>
             </div>
         );
@@ -229,6 +237,65 @@ class BlockquoteGroup extends React.Component {
                 <Blockquote success>This is a blockquote.</Blockquote>
                 <Blockquote warning>This is a blockquote.</Blockquote>
                 <Blockquote danger>This is a blockquote.</Blockquote>
+            </div>
+        );
+    }
+}
+
+class CardGroup extends React.Component {
+    render() {
+        return (
+            <div>
+                <h5>Cards:</h5>
+                <Card style={{maxWidth: 350, margin: 10}}>
+                    <Card.Header>
+                        <Card.Header.Title>This is the Title</Card.Header.Title>
+                        <Card.Header.Subtitle>This is the Subtitle</Card.Header.Subtitle>
+                    </Card.Header>
+                    <Card.Body>
+                        <Card.Body.Image src="http://via.placeholder.com/350x250"/>
+                        <p>
+                            "There are two hard things in computer science: cache invalidation,
+                            naming things, and off-by-one errors."
+                        </p>
+                    </Card.Body>
+                </Card>
+
+                <Card shadow style={{maxWidth: 300, margin: 10}}>
+                    <Card.Header>
+                        <Card.Header.Title>This is the Title</Card.Header.Title>
+                        <Card.Header.Subtitle>This is the Subtitle</Card.Header.Subtitle>
+                    </Card.Header>
+                    <Card.Body>
+                        <p>
+                            "There are two hard things in computer science: cache invalidation,
+                            naming things, and off-by-one errors."
+                        </p>
+                    </Card.Body>
+                    <Card.Footer>
+                        <Card.Footer.Item><p>Item1</p></Card.Footer.Item>
+                        <Card.Footer.Item><p>Item2</p></Card.Footer.Item>
+                        <Card.Footer.Item><p>Item3</p></Card.Footer.Item>
+                    </Card.Footer>
+                </Card>
+
+                <Card hoverable style={{maxWidth: 300, margin: 10}}>
+                    <Card.Header>
+                        <Card.Header.Title>This is the Title</Card.Header.Title>
+                        <Card.Header.Subtitle>This is the Subtitle</Card.Header.Subtitle>
+                    </Card.Header>
+                    <Card.Body>
+                        <p>
+                            "There are two hard things in computer science: cache invalidation,
+                            naming things, and off-by-one errors."
+                        </p>
+                    </Card.Body>
+                    <Card.Footer>
+                        <Card.Footer.Item>
+                            <h6>This is the Footer</h6>
+                        </Card.Footer.Item>
+                    </Card.Footer>
+                </Card>
             </div>
         );
     }

@@ -27,7 +27,7 @@ const Blockquote = ({
     );
 };
 
-Blockquote.PropTypes = {
+Blockquote.propTypes = {
     children: PropTypes.any,
     className: PropTypes.string,
     primary: PropTypes.bool,

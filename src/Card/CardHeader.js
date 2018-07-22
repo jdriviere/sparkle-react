@@ -2,27 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const Buttons = ({
+import Title from './CardHeaderTitle';
+import Subtitle from './CardHeaderSubtitle';
+
+const Header = ({
     children,
-    solid,
     className,
     ...attributes
 }) => {
-    const classes = classNames('buttons', {
-        'make-solid': solid
-    }, className);
-    
+    const classes = classNames('card__header', className);
+
     return (
         <div className={classes} {...attributes}>
             {children}
         </div>
     );
-};
+}
 
-Buttons.propTypes = {
+Header.Title = Title;
+Header.Subtitle = Subtitle;
+
+Header.propTypes = {
     children: PropTypes.any,
-    solid: PropTypes.bool,
     className: PropTypes.string
 };
 
-export default Buttons;
+export default Header;

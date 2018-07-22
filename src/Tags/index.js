@@ -19,7 +19,7 @@ const Tags = ({
     );
 };
 
-Tags.PropTypes = {
+Tags.propTypes = {
     children: PropTypes.any,
     solid: PropTypes.bool,
     className: PropTypes.string

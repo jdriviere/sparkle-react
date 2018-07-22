@@ -2,27 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const Buttons = ({
+import Item from './CardFooterItem';
+
+const Footer = ({
     children,
-    solid,
     className,
     ...attributes
 }) => {
-    const classes = classNames('buttons', {
-        'make-solid': solid
-    }, className);
-    
+    const classes = classNames('card__footer', className);
+
     return (
         <div className={classes} {...attributes}>
             {children}
         </div>
     );
-};
+}
 
-Buttons.propTypes = {
+Footer.Item = Item;
+
+Footer.propTypes = {
     children: PropTypes.any,
-    solid: PropTypes.bool,
     className: PropTypes.string
 };
 
-export default Buttons;
+export default Footer;

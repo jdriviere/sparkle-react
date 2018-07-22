@@ -2,27 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const Buttons = ({
+import Image from './CardBodyImage';
+
+const Body = ({
     children,
-    solid,
     className,
     ...attributes
 }) => {
-    const classes = classNames('buttons', {
-        'make-solid': solid
-    }, className);
-    
+    const classes = classNames('card__body', className);
+
     return (
         <div className={classes} {...attributes}>
             {children}
         </div>
     );
-};
+}
 
-Buttons.propTypes = {
+Body.Image = Image;
+
+Body.propTypes = {
     children: PropTypes.any,
-    solid: PropTypes.bool,
     className: PropTypes.string
 };
 
-export default Buttons;
+export default Body;

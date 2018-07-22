@@ -33,7 +33,7 @@ const Alert = ({
     );
 };
 
-Alert.PropTypes = {
+Alert.propTypes = {
     children: PropTypes.any,
     className: PropTypes.string,
     primary: PropTypes.bool,

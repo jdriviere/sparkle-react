@@ -35,7 +35,7 @@ const Tag = ({
     );
 };
 
-Tag.PropTypes = {
+Tag.propTypes = {
     children: PropTypes.any,
     className: PropTypes.string,
     primary: PropTypes.bool,

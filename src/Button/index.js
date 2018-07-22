@@ -53,7 +53,7 @@ const Button = ({
     );
 };
 
-Button.PropTypes = {
+Button.propTypes = {
     children: PropTypes.any,
     className: PropTypes.string,
     primary: PropTypes.bool,
