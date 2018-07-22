@@ -23,32 +23,33 @@ const Button = ({
     block,
     radial,
     round,
-    className
+    className,
+    ...attributes
 }) => {
     const classes = classNames('button', {
-        'button--primary': primary,
-        'button--info': info,
-        'button--success': success,
-        'button--warning': warning,
-        'button--danger': danger,
-        'button--light': light,
-        'button--dark': dark,
-        'button--reverse': reverse,
-        'button--outline': outline,
-        'button--ghost': ghost,
-        'button--link': link,
-        'button--xsmall': xSmall,
-        'button--small': small,
-        'button--medium': medium,
-        'button--large': large,
-        'button--xlarge': xLarge,
-        'button--block': block,
-        'button--h-round': radial,
-        'button--f-round': round
+        'make-primary': primary,
+        'make-info': info,
+        'make-success': success,
+        'make-warning': warning,
+        'make-danger': danger,
+        'make-light': light,
+        'make-dark': dark,
+        'make-reverse': reverse,
+        'make-outline': outline,
+        'make-ghost': ghost,
+        'make-link': link,
+        'make-xsmall': xSmall,
+        'make-small': small,
+        'make-medium': medium,
+        'make-large': large,
+        'make-xlarge': xLarge,
+        'make-block': block,
+        'make-radial': radial,
+        'make-round': round
     }, className);
 
     return (
-        <button className={ classes }>{ children }</button>
+        <button className={classes} {...attributes}>{children}</button>
     );
 };
 

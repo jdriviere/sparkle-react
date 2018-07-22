@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
-import 'sparkle.css/dist/css/sparkle.min.css';
 import Alert from '../src/Alert';
+import Blockquote from '../src/Blockquote';
 import Button from '../src/Button';
 import Buttons from '../src/Buttons';
 import Tag from '../src/Tag';
@@ -42,6 +42,8 @@ class App extends Component {
 
                     <br/>
                     <AlertGroup/>
+                    <br/>
+                    <BlockquoteGroup/>
                     <br/>
                     <ButtonGroup/>
                     <br/>
@@ -95,6 +97,16 @@ class ButtonGroup extends React.Component {
                     <Button dark>Button</Button>
                 </Buttons>
                 <Buttons>
+                    <Button disabled>Button</Button>
+                    <Button primary disabled>Button</Button>
+                    <Button info disabled>Button</Button>
+                    <Button success disabled>Button</Button>
+                    <Button warning disabled>Button</Button>
+                    <Button danger disabled>Button</Button>
+                    <Button light disabled>Button</Button>
+                    <Button dark disabled>Button</Button>
+                </Buttons>
+                <Buttons style={{background:'#ADD2E6', padding: 10}}>
                     <Button primary reverse>Button</Button>
                     <Button info reverse>Button</Button>
                     <Button success reverse>Button</Button>
@@ -103,7 +115,7 @@ class ButtonGroup extends React.Component {
                     <Button light reverse>Button</Button>
                     <Button dark reverse>Button</Button>
                 </Buttons>
-                <Buttons>
+                <Buttons style={{background:'#ADD2E6', padding: 10}}>
                     <Button primary ghost>Button</Button>
                     <Button info ghost>Button</Button>
                     <Button success ghost>Button</Button>
@@ -112,7 +124,7 @@ class ButtonGroup extends React.Component {
                     <Button light ghost>Button</Button>
                     <Button dark ghost>Button</Button>
                 </Buttons>
-                <Buttons>
+                <Buttons style={{background:'#0012E5', padding: 10}}>
                     <Button primary link>Button</Button>
                     <Button info link>Button</Button>
                     <Button success link>Button</Button>
@@ -132,6 +144,10 @@ class ButtonGroup extends React.Component {
                 <Buttons>
                     <Button radial>Button</Button>
                     <Button round>Button</Button>
+                </Buttons>
+                <Buttons solid>
+                    <Button>Button</Button>
+                    <Button>Button</Button>
                 </Buttons>
             </div>
         );
@@ -173,8 +189,28 @@ class TagGroup extends React.Component {
                 </Tags>
                 <Tags>
                     <Tag>Tag</Tag>
-                    <Tag round>Tag</Tag>
+                    <Tag warning reverse bullet>Tag</Tag>
                 </Tags>
+                <Tags solid>
+                    <Tag primary>Tag</Tag>
+                    <Tag info>Tag</Tag>
+                    <Tag dark>Tag</Tag>
+                </Tags>
+            </div>
+        );
+    }
+}
+
+class BlockquoteGroup extends React.Component {
+    render() {
+        return (
+            <div>
+                <Blockquote>This is a blockquote.</Blockquote>
+                <Blockquote primary>This is a blockquote.</Blockquote>
+                <Blockquote info>This is a blockquote.</Blockquote>
+                <Blockquote success>This is a blockquote.</Blockquote>
+                <Blockquote warning>This is a blockquote.</Blockquote>
+                <Blockquote danger>This is a blockquote.</Blockquote>
             </div>
         );
     }

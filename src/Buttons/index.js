@@ -4,19 +4,24 @@ import classNames from 'classnames';
 
 const Buttons = ({
     children,
-    className
+    solid,
+    className,
+    ...attributes
 }) => {
-    const classes = classNames('buttons', className);
+    const classes = classNames('buttons', {
+        'make-solid': solid
+    }, className);
     
     return (
-        <div className={ classes }>
-            { children }
+        <div className={classes} {...attributes}>
+            {children}
         </div>
     );
 };
 
 Buttons.PropTypes = {
     children: PropTypes.any,
+    solid: PropTypes.bool,
     className: PropTypes.string
 };
 

@@ -12,22 +12,23 @@ const Alert = ({
     light,
     dark,
     outline,
-    className
+    className,
+    ...attributes
 }) => {
     const classes = classNames('alert', {
-        'alert--primary': primary,
-        'alert--info': info,
-        'alert--success': success,
-        'alert--warning': warning,
-        'alert--danger': danger,
-        'alert--light': light,
-        'alert--dark': dark,
-        'alert--outline': outline
+        'make-primary': primary,
+        'make-info': info,
+        'make-success': success,
+        'make-warning': warning,
+        'make-danger': danger,
+        'make-light': light,
+        'make-dark': dark,
+        'make-outline': outline
     }, className);
 
     return (
-        <div className = { classes }>
-            { children }
+        <div className={classes} {...attributes}>
+            {children}
         </div>
     );
 };

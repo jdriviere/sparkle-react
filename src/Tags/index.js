@@ -4,19 +4,24 @@ import classNames from 'classnames';
 
 const Tags = ({
     children,
-    className
+    solid,
+    className,
+    ...attributes
 }) => {
-    const classes = classNames('tags', className);
+    const classes = classNames('tags', {
+        'make-solid': solid
+    }, className);
     
     return (
-        <div className={ classes }>
-            { children }
+        <div className={classes} {...attributes}>
+            {children}
         </div>
     );
 };
 
 Tags.PropTypes = {
     children: PropTypes.any,
+    solid: PropTypes.bool,
     className: PropTypes.string
 };
 
