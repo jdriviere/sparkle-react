@@ -9,6 +9,8 @@ import Tag from '../src/Tag';
 import Tags from '../src/Tags';
 
 import Card from '../src/Card';
+import Grid from '../src/Grid';
+import Media from '../src/Media';
 
 import './App.css';
 
@@ -55,13 +57,18 @@ class App extends Component {
 
                     <br/><br/>
                     <CardGroup/>
-                    
+                    <br/>
+                    <MediaGroup/>
+                    <br/>
+                    <GridGroup/>
+                    <br/><br/>
                 </div>
             </div>
         );
     }
 }
 
+// COMPONENTS
 class AlertGroup extends React.Component {
     render() {
         return (
@@ -242,6 +249,7 @@ class BlockquoteGroup extends React.Component {
     }
 }
 
+// LAYOUTS
 class CardGroup extends React.Component {
     render() {
         return (
@@ -296,6 +304,173 @@ class CardGroup extends React.Component {
                         </Card.Footer.Item>
                     </Card.Footer>
                 </Card>
+            </div>
+        );
+    }
+}
+
+class MediaGroup extends React.Component {
+    render() {
+        const DATE_OPTIONS = {
+            weekday: 'short',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        };
+        let cdate = (new Date()).toLocaleDateString('en-US', DATE_OPTIONS);
+
+        return (
+            <div>
+                <h5>Media:</h5>
+                <Media>
+                    <Media.Profile>
+                        <Media.Profile.Image src="http://via.placeholder.com/64x64"/>
+                    </Media.Profile>
+                    <Media.Body>
+                        <Media.Body.Title>Title Upperdink</Media.Body.Title>
+                        <Media.Body.Subtitle>Subtitler</Media.Body.Subtitle>
+                        <Media.Body.Timestamp>{cdate}</Media.Body.Timestamp>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Suspendisse venenatis mauris a est viverra pellentesque.
+                            Nulla facilisi. Duis eu nulla at ipsum rutrum egestas in vel lectus.
+                            Vivamus vulputate pharetra malesuada. Nullam suscipit,
+                            magna sit amet dictum porta, leo urna sodales risus,
+                            nec vulputate nisi tellus non purus. Aliquam efficitur
+                            lectus felis, eget suscipit mauris imperdiet id.
+                            Integer at sollicitudin libero, ut pulvinar nibh.
+                        </p>
+                    </Media.Body>
+                </Media>
+
+                <Media center>
+                    <Media.Profile>
+                        <Media.Profile.Image src="http://via.placeholder.com/64x64"/>
+                    </Media.Profile>
+                    <Media.Body>
+                        <Media.Body.Title>Title</Media.Body.Title>
+                        <Media.Body.Subtitle>Subtitle</Media.Body.Subtitle>
+                        <Media.Body.Timestamp>{cdate}</Media.Body.Timestamp>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Suspendisse venenatis mauris a est viverra pellentesque.
+                            Nulla facilisi. Duis eu nulla at ipsum rutrum egestas in vel lectus.
+                            Vivamus vulputate pharetra malesuada. Nullam suscipit,
+                            magna sit amet dictum porta, leo urna sodales risus,
+                            nec vulputate nisi tellus non purus. Aliquam efficitur
+                            lectus felis, eget suscipit mauris imperdiet id.
+                            Integer at sollicitudin libero, ut pulvinar nibh.
+                        </p>
+                    </Media.Body>
+                </Media>
+
+                <Media reverse>
+                    <Media.Profile>
+                        <Media.Profile.Image src="http://via.placeholder.com/64x64"/>
+                    </Media.Profile>
+                    <Media.Body>
+                        <Media.Body.Title>Title Mania</Media.Body.Title>
+                        <Media.Body.Subtitle>Assistant Subtitler</Media.Body.Subtitle>
+                        <Media.Body.Timestamp>{cdate}</Media.Body.Timestamp>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Suspendisse venenatis mauris a est viverra pellentesque.
+                            Nulla facilisi. Duis eu nulla at ipsum rutrum egestas in vel lectus.
+                            Vivamus vulputate pharetra malesuada. Nullam suscipit,
+                            magna sit amet dictum porta, leo urna sodales risus,
+                            nec vulputate nisi tellus non purus. Aliquam efficitur
+                            lectus felis, eget suscipit mauris imperdiet id.
+                            Integer at sollicitudin libero, ut pulvinar nibh.
+                        </p>
+                    </Media.Body>
+                </Media>
+
+                <Media center reverse>
+                    <Media.Profile>
+                        <Media.Profile.Image src="http://via.placeholder.com/64x64"/>
+                    </Media.Profile>
+                    <Media.Body>
+                        <Media.Body.Title>Title</Media.Body.Title>
+                        <Media.Body.Subtitle>Subtitle</Media.Body.Subtitle>
+                        <Media.Body.Timestamp>{cdate}</Media.Body.Timestamp>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Suspendisse venenatis mauris a est viverra pellentesque.
+                            Nulla facilisi. Duis eu nulla at ipsum rutrum egestas in vel lectus.
+                            Vivamus vulputate pharetra malesuada. Nullam suscipit,
+                            magna sit amet dictum porta, leo urna sodales risus,
+                            nec vulputate nisi tellus non purus. Aliquam efficitur
+                            lectus felis, eget suscipit mauris imperdiet id.
+                            Integer at sollicitudin libero, ut pulvinar nibh.
+                        </p>
+                    </Media.Body>
+                </Media>
+            </div>
+        );
+    }
+}
+
+class GridGroup extends React.Component {
+    render() {
+        return (
+            <div>
+                <h5>Grid:</h5>
+                <Grid gutters>
+                    <Grid.Column>
+                        <p style={{padding: 10, border:'1px solid #AAA'}}>Auto, Grid has Gutter</p>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <p style={{padding: 10, border:'1px solid #AAA'}}>Auto, Grid has Gutter</p>
+                    </Grid.Column>
+                </Grid>
+                <Grid gutters>
+                    <Grid.Column size="2">
+                        <p style={{padding: 10, border:'1px solid #AAA'}}>Size 2, Grid has Gutter</p>
+                    </Grid.Column>
+                    <Grid.Column size="8">
+                        <p style={{padding: 10, border:'1px solid #AAA'}}>Size 8, Grid has Gutter</p>
+                    </Grid.Column>
+                    <Grid.Column size="2">
+                        <p style={{padding: 10, border:'1px solid #AAA'}}>Size 2, Grid has Gutter</p>
+                    </Grid.Column>
+                </Grid>
+                <Grid>
+                    <Grid.Column size="half" offset="2">
+                        <p style={{padding: 10, border:'1px solid #AAA'}}>Size Half, Offset 3</p>
+                    </Grid.Column>
+                    <Grid.Column size="2" offset="1">
+                        <p style={{padding: 10, border:'1px solid #AAA'}}>Size 2, Offset 1</p>
+                    </Grid.Column>
+                    <Grid.Column size="1">
+                        <p style={{padding: 10, border:'1px solid #AAA'}}>Size 1</p>
+                    </Grid.Column>
+                </Grid>
+
+                <h6>Nested:</h6>
+                <Grid>
+                    <Grid.Column>
+                        <p style={{padding: 10, border:'2px solid coral'}}>Auto</p>
+                        <Grid>
+                            <Grid.Column size="8">
+                                <p style={{padding: 10, border:'1px solid #ABD'}}>Size 8</p>
+                            </Grid.Column>
+                            <Grid.Column size="4">
+                                <p style={{padding: 10, border:'1px solid #DBA'}}>Size 4</p>
+                            </Grid.Column>
+                        </Grid>
+                    </Grid.Column>
+                    <Grid.Column size="8">
+                        <p style={{padding: 10, border:'2px solid cyan'}}>Size 8</p>
+                        <Grid>
+                            <Grid.Column>
+                                <p style={{padding: 10, border:'1px solid #CCC'}}>Auto</p>
+                            </Grid.Column>
+                            <Grid.Column>
+                                <p style={{padding: 10, border:'1px solid #CCC'}}>Auto</p>
+                            </Grid.Column>
+                        </Grid>
+                    </Grid.Column>
+                </Grid>
             </div>
         );
     }

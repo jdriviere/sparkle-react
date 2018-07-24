@@ -12,6 +12,8 @@ export { Tags } from './Tags';
 // LAYOUTS
 // ========================================= //
 export { Card } from './Card';
+export { Grid } from './Grid';
+export { Media } from './Media';
 
 // ========================================= //
 // UTILITIES
