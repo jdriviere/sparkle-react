@@ -11,19 +11,21 @@ import Tags from '../src/Tags';
 import Card from '../src/Card';
 import Grid from '../src/Grid';
 import Media from '../src/Media';
+import Navigation from '../src/Navigation';
 
 import './App.css';
 
 class App extends Component {
     render() {
         return(
-            <div className="wrapper">
-                <div className="App">
+            <div className="App">
+                <NavGroup/>
+                <div className="wrapper">
                     <div className="App__section">
-                        <h1>Hello, World!</h1>
+                        <h1>ReSpark Project</h1>
 
                         <Tags>
-                            <Tag primary>ReSpark</Tag>
+                            <Tag primary>Sparkle</Tag>
                             <Tag dark>v1.0.0</Tag>
                             <Tag success>New!</Tag>
                         </Tags>
@@ -33,20 +35,21 @@ class App extends Component {
                             the <Tag>Sparkle.CSS</Tag> framework for styling web pages
                             and web applications.
                         </h5>
+
+                        <Buttons>
+                            <Button primary large>
+                                <i className="fa fa-download"></i>
+                                &nbsp;Download
+                            </Button>
+                            <Button dark outline large>
+                                <i className="fa fa-book"></i>
+                                &nbsp;Read the Docs
+                            </Button>
+                        </Buttons>
                     </div>
+                </div>
 
-                    <Buttons>
-                        <Button primary large>
-                            <i className="fa fa-download"></i>
-                            &nbsp;Download
-                        </Button>
-                        <Button dark outline large>
-                            <i className="fa fa-book"></i>
-                            &nbsp;Read the Docs
-                        </Button>
-                    </Buttons>
-
-                    <br/>
+                <div className="wrapper">
                     <AlertGroup/>
                     <br/>
                     <BlockquoteGroup/>
@@ -471,6 +474,29 @@ class GridGroup extends React.Component {
                         </Grid>
                     </Grid.Column>
                 </Grid>
+            </div>
+        );
+    }
+}
+
+class NavGroup extends React.Component {
+    render() {
+        return (
+            <div>
+                <Navigation fixed>                    
+                    <Navigation.Brand>brand</Navigation.Brand>
+                    <Navigation.Menu>
+                        <Navigation.Menu.Item active><a href="">active</a></Navigation.Menu.Item>
+                        <Navigation.Menu.Item><a href="">item 2</a></Navigation.Menu.Item>
+                        <Navigation.Menu.Item><a href="">item 3</a></Navigation.Menu.Item>
+                    </Navigation.Menu>
+                    <Navigation.Menu right>
+                        <Navigation.Menu.Item><a href="">item 4</a></Navigation.Menu.Item>
+                        <Navigation.Menu.Item><a href="">item 5</a></Navigation.Menu.Item>
+                        <Navigation.Menu.Item><a href="">item 6</a></Navigation.Menu.Item>
+                        <Button primary outline small>Signup</Button>
+                    </Navigation.Menu>
+                </Navigation>
             </div>
         );
     }
