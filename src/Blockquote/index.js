@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import Footer from './BlockquoteFooter';
+
 const Blockquote = ({
     children,
     primary,
@@ -26,6 +28,8 @@ const Blockquote = ({
         </blockquote>
     );
 };
+
+Blockquote.Footer = Footer;
 
 Blockquote.propTypes = {
     children: PropTypes.any,

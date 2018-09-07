@@ -38,5 +38,3 @@ The `offset` variable can be either range from `1` to `12`, or of the following:
 - `sixths`
 - `twelfths`
 - `full`
-
-**_Note_**: For the time being, the fractional offsets are not yet functional.

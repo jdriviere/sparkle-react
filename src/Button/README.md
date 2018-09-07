@@ -18,7 +18,6 @@ The `$style` variable can be either of the following:
 The `$modifier` variable can be either of the following:
 - `outline`
 - `reverse`
-- `ghost`
 - `link`
 
 The `$size` variable can be either of the following:
@@ -32,7 +31,6 @@ The `$size` variable can be either of the following:
 The `$roundness` variable can be either of the following:
 - `radial`
 - `round`
-- `ghost`
 
 **_Note_**: The `$style`, `$modifier`, `$size`, and `$roundness` variables are optional.
 Furthermore, the `$style` values `outline` and `reverse` can also be combined together (no

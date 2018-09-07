@@ -85,14 +85,6 @@ class AlertGroup extends React.Component {
                 <Alert danger>Alert</Alert>
                 <Alert light>Alert</Alert>
                 <Alert dark>Alert</Alert>
-                <br/>
-                <Alert outline primary>Alert</Alert>
-                <Alert outline info>Alert</Alert>
-                <Alert outline success>Alert</Alert>
-                <Alert outline warning>Alert</Alert>
-                <Alert outline danger>Alert</Alert>
-                <Alert outline light>Alert</Alert>
-                <Alert outline dark>Alert</Alert>
             </div>
         );
     }
@@ -149,15 +141,6 @@ class ButtonGroup extends React.Component {
                     <Button danger reverse outline>Button</Button>
                     <Button light reverse outline>Button</Button>
                     <Button dark reverse outline>Button</Button>
-                </Buttons>
-                <Buttons style={{background:'#333639', padding: 10}}>
-                    <Button primary ghost>Button</Button>
-                    <Button info ghost>Button</Button>
-                    <Button success ghost>Button</Button>
-                    <Button warning ghost>Button</Button>
-                    <Button danger ghost>Button</Button>
-                    <Button light ghost>Button</Button>
-                    <Button dark ghost>Button</Button>
                 </Buttons>
                 <Buttons style={{background:'#333639', padding: 10}}>
                     <Button primary link>Button</Button>
@@ -241,12 +224,10 @@ class BlockquoteGroup extends React.Component {
     render() {
         return (
             <div>
-                <Blockquote>This is a blockquote.</Blockquote>
-                <Blockquote primary>This is a blockquote.</Blockquote>
-                <Blockquote info>This is a blockquote.</Blockquote>
-                <Blockquote success>This is a blockquote.</Blockquote>
-                <Blockquote warning>This is a blockquote.</Blockquote>
-                <Blockquote danger>This is a blockquote.</Blockquote>
+                <Blockquote>
+                    <p>This is a blockquote</p>
+                    <Blockquote.Footer>Footer</Blockquote.Footer>
+                </Blockquote>
             </div>
         );
     }
@@ -346,27 +327,6 @@ class MediaGroup extends React.Component {
                     </Media.Body>
                 </Media>
 
-                <Media center>
-                    <Media.Profile>
-                        <Media.Profile.Image src="http://via.placeholder.com/64x64"/>
-                    </Media.Profile>
-                    <Media.Body>
-                        <Media.Body.Title>Title</Media.Body.Title>
-                        <Media.Body.Subtitle>Subtitle</Media.Body.Subtitle>
-                        <Media.Body.Timestamp>{cdate}</Media.Body.Timestamp>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Suspendisse venenatis mauris a est viverra pellentesque.
-                            Nulla facilisi. Duis eu nulla at ipsum rutrum egestas in vel lectus.
-                            Vivamus vulputate pharetra malesuada. Nullam suscipit,
-                            magna sit amet dictum porta, leo urna sodales risus,
-                            nec vulputate nisi tellus non purus. Aliquam efficitur
-                            lectus felis, eget suscipit mauris imperdiet id.
-                            Integer at sollicitudin libero, ut pulvinar nibh.
-                        </p>
-                    </Media.Body>
-                </Media>
-
                 <Media reverse>
                     <Media.Profile>
                         <Media.Profile.Image src="http://via.placeholder.com/64x64"/>
@@ -374,27 +334,6 @@ class MediaGroup extends React.Component {
                     <Media.Body>
                         <Media.Body.Title>Title Mania</Media.Body.Title>
                         <Media.Body.Subtitle>Assistant Subtitler</Media.Body.Subtitle>
-                        <Media.Body.Timestamp>{cdate}</Media.Body.Timestamp>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Suspendisse venenatis mauris a est viverra pellentesque.
-                            Nulla facilisi. Duis eu nulla at ipsum rutrum egestas in vel lectus.
-                            Vivamus vulputate pharetra malesuada. Nullam suscipit,
-                            magna sit amet dictum porta, leo urna sodales risus,
-                            nec vulputate nisi tellus non purus. Aliquam efficitur
-                            lectus felis, eget suscipit mauris imperdiet id.
-                            Integer at sollicitudin libero, ut pulvinar nibh.
-                        </p>
-                    </Media.Body>
-                </Media>
-
-                <Media center reverse>
-                    <Media.Profile>
-                        <Media.Profile.Image src="http://via.placeholder.com/64x64"/>
-                    </Media.Profile>
-                    <Media.Body>
-                        <Media.Body.Title>Title</Media.Body.Title>
-                        <Media.Body.Subtitle>Subtitle</Media.Body.Subtitle>
                         <Media.Body.Timestamp>{cdate}</Media.Body.Timestamp>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -438,14 +377,14 @@ class GridGroup extends React.Component {
                     </Grid.Column>
                 </Grid>
                 <Grid>
-                    <Grid.Column size="half" offset="2">
-                        <p style={{padding: 10, border:'1px solid #AAA'}}>Size Half, Offset 3</p>
+                    <Grid.Column size="fourth">
+                        <p style={{padding: 10, border:'1px solid #AAA'}}>Size Fourth</p>
                     </Grid.Column>
-                    <Grid.Column size="2" offset="1">
-                        <p style={{padding: 10, border:'1px solid #AAA'}}>Size 2, Offset 1</p>
+                    <Grid.Column size="half" offset="twelfth">
+                        <p style={{padding: 10, border:'1px solid #AAA'}}>Size Half, Offset Twelfth</p>
                     </Grid.Column>
-                    <Grid.Column size="1">
-                        <p style={{padding: 10, border:'1px solid #AAA'}}>Size 1</p>
+                    <Grid.Column size="1" offset="1">
+                        <p style={{padding: 10, border:'1px solid #AAA'}}>Size 1, Offset 1</p>
                     </Grid.Column>
                 </Grid>
 

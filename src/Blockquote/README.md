@@ -1,14 +1,10 @@
 # Blockquote
 
 ```jsx
-<Blockquote $style>
+<Blockquote>
     // Children elements go here...
+    <Blockquote.Footer>
+        // Children elements go here...
+    </Blockquote.Footer>
 </Blockquote>
 ```
-
-The `$style` variable can be either of the following:
-- `primary`
-- `info`
-- `success`
-- `warning`
-- `danger`

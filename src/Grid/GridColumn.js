@@ -44,17 +44,16 @@ const Column = ({
         'offset-10': offset === '10',
         'offset-11': offset === '11',
         'offset-12': offset === '12',
-        // NOTE: Fix fractional offsets, as they don't render!
-        // 'offset-twelfth': offset === 'twelfth',
-        // 'offset-sixth': offset === 'sixth',
-        // 'offset-fourth': offset === 'fourth',
-        // 'offset-third': offset === 'third',
-        // 'offset-half': offset === 'half',
-        // 'offset-thirds': offset === 'thirds',
-        // 'offset-fourths': offset === 'fourths',
-        // 'offset-sixths': offset === 'sixths',
-        // 'offset-twelfths': offset === 'twelfths',
-        // 'offset-full': offset === 'full'
+        'offset-twelfth': offset === 'twelfth',
+        'offset-sixth': offset === 'sixth',
+        'offset-fourth': offset === 'fourth',
+        'offset-third': offset === 'third',
+        'offset-half': offset === 'half',
+        'offset-thirds': offset === 'thirds',
+        'offset-fourths': offset === 'fourths',
+        'offset-sixths': offset === 'sixths',
+        'offset-twelfths': offset === 'twelfths',
+        'offset-full': offset === 'full'
     }, className);
     
     return (
@@ -73,9 +72,8 @@ Column.propTypes = {
     ]),
     offset: PropTypes.oneOf([
         '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12',
-        // NOTE: Fix fractional offsets first!
-        // 'twelfth', 'sixth', 'fourth', 'third', 'half', 'thirds', 'fourths',
-        // 'sixths', 'twelfths', 'full'
+        'twelfth', 'sixth', 'fourth', 'third', 'half', 'thirds', 'fourths',
+        'sixths', 'twelfths', 'full'
     ]),
     className: PropTypes.string
 };
