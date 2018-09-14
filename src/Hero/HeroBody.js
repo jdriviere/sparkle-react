@@ -2,23 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const Item = ({
+const Body = ({
     children,
     className,
     ...attributes
 }) => {
-    const classes = classNames('card__footer__item', className);
+    const classes = classNames('hero__body', className);
 
     return (
         <section className={classes} {...attributes}>
-            {children}
+            <div className="wrapper">
+                {children}
+            </div>
         </section>
     );
 }
 
-Item.propTypes = {
+Body.propTypes = {
     children: PropTypes.any,
     className: PropTypes.string
 };
 
-export default Item;
+export default Body;

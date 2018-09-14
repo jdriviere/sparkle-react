@@ -12,9 +12,9 @@ const Body = ({
     const classes = classNames('card__body', className);
 
     return (
-        <div className={classes} {...attributes}>
+        <section className={classes} {...attributes}>
             {children}
-        </div>
+        </section>
     );
 }
 

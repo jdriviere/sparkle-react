@@ -2,27 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import Item from './CardFooterItem';
-
-const Footer = ({
+const Header = ({
     children,
     className,
     ...attributes
 }) => {
-    const classes = classNames('card__footer', className);
+    const classes = classNames('hero__header', className);
 
     return (
-        <footer className={classes} {...attributes}>
+        <header className={classes} {...attributes}>
             {children}
-        </footer>
+        </header>
     );
 }
 
-Footer.Item = Item;
-
-Footer.propTypes = {
+Header.propTypes = {
     children: PropTypes.any,
     className: PropTypes.string
 };
 
-export default Footer;
+export default Header;

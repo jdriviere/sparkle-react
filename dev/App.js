@@ -10,6 +10,7 @@ import Tags from '../src/Tags';
 
 import Card from '../src/Card';
 import Grid from '../src/Grid';
+import Hero from '../src/Hero';
 import Media from '../src/Media';
 import Navigation from '../src/Navigation';
 
@@ -64,6 +65,8 @@ class App extends Component {
                     <MediaGroup/>
                     <br/>
                     <GridGroup/>
+                    <br/>
+                    <HeroGroup/>
                     <br/><br/>
                 </div>
             </div>
@@ -436,6 +439,30 @@ class NavGroup extends React.Component {
                         <Button primary outline small>Signup</Button>
                     </Navigation.Menu>
                 </Navigation>
+            </div>
+        );
+    }
+}
+
+class HeroGroup extends React.Component {
+    render() {
+        let size = 'halfSize';
+        let header;
+        let footer;
+        if (size === 'halfSize' || size === 'fullSize') {
+            header = <Hero.Header><p className="make-text-centered">This is the Hero Header.</p></Hero.Header>;
+            footer = <Hero.Footer><p className="make-text-centered">This is the Hero Footer.</p></Hero.Footer>;
+        } // End of IF
+
+        return (
+            <div>
+                <Hero size={ size } danger>
+                    { header }
+                    <Hero.Body>
+                        <h1 className="make-text-centered">This is part of the Hero body!</h1>
+                    </Hero.Body>
+                    { footer }
+                </Hero>
             </div>
         );
     }

@@ -13,9 +13,9 @@ const Header = ({
     const classes = classNames('card__header', className);
 
     return (
-        <div className={classes} {...attributes}>
+        <header className={classes} {...attributes}>
             {children}
-        </div>
+        </header>
     );
 }
 

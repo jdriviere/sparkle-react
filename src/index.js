@@ -22,7 +22,7 @@ export { Tags } from './Tags';
 // ========================================= //
 export { Card } from './Card';
 export { Grid } from './Grid';
-// export { Hero } from './Hero';
+export { Hero } from './Hero';
 export { Media } from './Media';
 // export { Menu } from './Menu';
 export { Navigation } from './Navigation';
