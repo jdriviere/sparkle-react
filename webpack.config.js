@@ -2,7 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './dev/index.js',
+  // entry: './dev/index.js',
+  entry: './demo/index.js',
   mode: 'development',
   module: {
     rules: [
