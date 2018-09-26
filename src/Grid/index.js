@@ -4,14 +4,16 @@ import classNames from 'classnames';
 
 import Column from './GridColumn';
 
-const Grid = ({
+const Columns = ({
     children,
-    gutters,
+    gapless,
+    multiline,
     className,
     ...attributes
 }) => {
-    const classes = classNames('grid', {
-        'make-gutters': gutters
+    const classes = classNames('columns', {
+        'make-no-gaps': gapless,
+        'make-multiline': multiline,
     }, className);
     
     return (
@@ -21,12 +23,13 @@ const Grid = ({
     );
 };
 
-Grid.Column = Column;
+Columns.Column = Column;
 
-Grid.propTypes = {
+Columns.propTypes = {
     children: PropTypes.any,
-    gutters: PropTypes.bool,
+    gapless: PropTypes.bool,
+    multiline: PropTypes.bool,
     className: PropTypes.string
 };
 
-export default Grid;
+export default Columns;

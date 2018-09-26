@@ -23,6 +23,7 @@ const Button = ({
     block,
     radial,
     round,
+    href,
     className,
     ...attributes
 }) => {
@@ -47,6 +48,13 @@ const Button = ({
         'make-radial': radial,
         'make-round': round
     }, className);
+
+    // Return a link if href is present
+    if (href !== undefined) {
+        return (
+            <a href={href} className={classes} {...attributes}>{children}</a>
+        );
+    } // End of IF
 
     return (
         <button className={classes} {...attributes}>{children}</button>
@@ -75,6 +83,7 @@ Button.propTypes = {
     block: PropTypes.bool,
     radial: PropTypes.bool,
     round: PropTypes.bool,
+    href: PropTypes.string
 };
 
 export default Button;

@@ -9,7 +9,7 @@ import Tag from '../src/Tag';
 import Tags from '../src/Tags';
 
 import Card from '../src/Card';
-import Grid from '../src/Grid';
+import Columns from '../src/Grid';
 import Hero from '../src/Hero';
 import Media from '../src/Media';
 import Navigation from '../src/Navigation';
@@ -25,7 +25,7 @@ class App extends Component {
                     <div className="App__section">
                         <h1>ReSpark Project</h1>
 
-                        <Tags>
+                        <Tags solid>
                             <Tag primary>Sparkle</Tag>
                             <Tag dark>v1.0.0</Tag>
                             <Tag success>New!</Tag>
@@ -64,7 +64,7 @@ class App extends Component {
                     <br/>
                     <MediaGroup/>
                     <br/>
-                    <GridGroup/>
+                    <ColumnsGroup/>
                     <br/>
                     <HeroGroup/>
                     <br/><br/>
@@ -99,7 +99,7 @@ class ButtonGroup extends React.Component {
             <div>
                 <h5>Buttons:</h5>
                 <Buttons>
-                    <Button>Button</Button>
+                    <Button href="#">Button</Button>
                     <Button primary>Button</Button>
                     <Button info>Button</Button>
                     <Button success>Button</Button>
@@ -355,67 +355,67 @@ class MediaGroup extends React.Component {
     }
 }
 
-class GridGroup extends React.Component {
+class ColumnsGroup extends React.Component {
     render() {
         return (
             <div>
-                <h5>Grid:</h5>
-                <Grid gutters>
-                    <Grid.Column>
-                        <p style={{padding: 10, border:'1px solid #AAA'}}>Auto, Grid has Gutter</p>
-                    </Grid.Column>
-                    <Grid.Column>
-                        <p style={{padding: 10, border:'1px solid #AAA'}}>Auto, Grid has Gutter</p>
-                    </Grid.Column>
-                </Grid>
-                <Grid gutters>
-                    <Grid.Column size="2">
-                        <p style={{padding: 10, border:'1px solid #AAA'}}>Size 2, Grid has Gutter</p>
-                    </Grid.Column>
-                    <Grid.Column size="8">
-                        <p style={{padding: 10, border:'1px solid #AAA'}}>Size 8, Grid has Gutter</p>
-                    </Grid.Column>
-                    <Grid.Column size="2">
-                        <p style={{padding: 10, border:'1px solid #AAA'}}>Size 2, Grid has Gutter</p>
-                    </Grid.Column>
-                </Grid>
-                <Grid>
-                    <Grid.Column size="fourth">
+                <h5>Columns:</h5>
+                <Columns>
+                    <Columns.Column>
+                        <p style={{padding: 10, border:'1px solid #AAA'}}>Auto</p>
+                    </Columns.Column>
+                    <Columns.Column>
+                        <p style={{padding: 10, border:'1px solid #AAA'}}>Auto</p>
+                    </Columns.Column>
+                </Columns>
+                <Columns gapless>
+                    <Columns.Column size="2">
+                        <p style={{padding: 10, border:'1px solid #AAA'}}>Size 2, Gapless</p>
+                    </Columns.Column>
+                    <Columns.Column size="6">
+                        <p style={{padding: 10, border:'1px solid #AAA'}}>Size 6, Gapless</p>
+                    </Columns.Column>
+                    <Columns.Column size="4">
+                        <p style={{padding: 10, border:'1px solid #AAA'}}>Size 4, Gapless</p>
+                    </Columns.Column>
+                </Columns>
+                <Columns>
+                    <Columns.Column size="fourth">
                         <p style={{padding: 10, border:'1px solid #AAA'}}>Size Fourth</p>
-                    </Grid.Column>
-                    <Grid.Column size="half" offset="twelfth">
+                    </Columns.Column>
+                    <Columns.Column size="half" offset="twelfth">
                         <p style={{padding: 10, border:'1px solid #AAA'}}>Size Half, Offset Twelfth</p>
-                    </Grid.Column>
-                    <Grid.Column size="1" offset="1">
-                        <p style={{padding: 10, border:'1px solid #AAA'}}>Size 1, Offset 1</p>
-                    </Grid.Column>
-                </Grid>
+                    </Columns.Column>
+                    <Columns.Column offset="1">
+                        <p style={{padding: 10, border:'1px solid #AAA'}}>Auto, Offset 1</p>
+                    </Columns.Column>
+                </Columns>
 
                 <h6>Nested:</h6>
-                <Grid>
-                    <Grid.Column>
+                <Columns>
+                    <Columns.Column>
                         <p style={{padding: 10, border:'2px solid coral'}}>Auto</p>
-                        <Grid>
-                            <Grid.Column size="8">
+                        <Columns>
+                            <Columns.Column size="8">
                                 <p style={{padding: 10, border:'1px solid #ABD'}}>Size 8</p>
-                            </Grid.Column>
-                            <Grid.Column size="4">
+                            </Columns.Column>
+                            <Columns.Column size="4">
                                 <p style={{padding: 10, border:'1px solid #DBA'}}>Size 4</p>
-                            </Grid.Column>
-                        </Grid>
-                    </Grid.Column>
-                    <Grid.Column size="8">
+                            </Columns.Column>
+                        </Columns>
+                    </Columns.Column>
+                    <Columns.Column size="8">
                         <p style={{padding: 10, border:'2px solid cyan'}}>Size 8</p>
-                        <Grid>
-                            <Grid.Column>
+                        <Columns>
+                            <Columns.Column>
                                 <p style={{padding: 10, border:'1px solid #CCC'}}>Auto</p>
-                            </Grid.Column>
-                            <Grid.Column>
+                            </Columns.Column>
+                            <Columns.Column>
                                 <p style={{padding: 10, border:'1px solid #CCC'}}>Auto</p>
-                            </Grid.Column>
-                        </Grid>
-                    </Grid.Column>
-                </Grid>
+                            </Columns.Column>
+                        </Columns>
+                    </Columns.Column>
+                </Columns>
             </div>
         );
     }
@@ -425,18 +425,18 @@ class NavGroup extends React.Component {
     render() {
         return (
             <div>
-                <Navigation fixed>                    
+                <Navigation>
                     <Navigation.Brand>brand</Navigation.Brand>
                     <Navigation.Menu>
-                        <Navigation.Menu.Item active><a href="">active</a></Navigation.Menu.Item>
-                        <Navigation.Menu.Item><a href="">item 2</a></Navigation.Menu.Item>
-                        <Navigation.Menu.Item><a href="">item 3</a></Navigation.Menu.Item>
+                        <Navigation.Menu.Item active><a href="#">active</a></Navigation.Menu.Item>
+                        <Navigation.Menu.Item><a href="#">item 2</a></Navigation.Menu.Item>
+                        <Navigation.Menu.Item><a href="#">item 3</a></Navigation.Menu.Item>
                     </Navigation.Menu>
                     <Navigation.Menu right>
-                        <Navigation.Menu.Item><a href="">item 4</a></Navigation.Menu.Item>
-                        <Navigation.Menu.Item><a href="">item 5</a></Navigation.Menu.Item>
-                        <Navigation.Menu.Item><a href="">item 6</a></Navigation.Menu.Item>
-                        <Button primary outline small>Signup</Button>
+                        <Navigation.Menu.Item><a href="#">item 4</a></Navigation.Menu.Item>
+                        <Navigation.Menu.Item><a href="#">item 5</a></Navigation.Menu.Item>
+                        <Navigation.Menu.Item><a href="#">item 6</a></Navigation.Menu.Item>
+                        <Button primary outline small className="make-margin-10-horizontal">Signup</Button>
                     </Navigation.Menu>
                 </Navigation>
             </div>
