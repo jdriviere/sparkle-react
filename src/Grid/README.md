@@ -1,19 +1,20 @@
 # Grid
 
 ```jsx
-<Grid $style>
-    <Grid.Column size="x" offset="y">
+<Columns $style>
+    <Columns.Column size="x" offset="y">
         // Children elements go here...
-    </Grid.Column>
-    <Grid.Column size="x" offset="y">
+    </Columns.Column>
+    <Columns.Column size="x" offset="y">
         // Children elements go here...
-    </Grid.Column>
+    </Columns.Column>
     ...
-</Grid>
+</Columns>
 ```
 
 The `$style` variable can be either of the following:
-- `gutters`
+- `gapless`
+- `multiline`
 
 The `size` variable can be either range from `1` to `12`, or of the following:
 - `twelfth`
