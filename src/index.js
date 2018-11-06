@@ -7,7 +7,7 @@ export { Blockquote } from './Blockquote';
 // export { Boxes } from './Boxes';
 export { Button } from './Button';
 export { Buttons } from './Buttons';
-// export { Loader } from './Loader';
+export { Loader } from './Loader';
 export { Tag } from './Tag';
 export { Tags } from './Tags';
 
