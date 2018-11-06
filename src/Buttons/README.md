@@ -1,7 +1,7 @@
 # Buttons
 
 ```jsx
-<Buttons $style>
+<Buttons $style $position>
     <Button>Button</Button>
     <Button>Button</Button>
     ...
@@ -11,4 +11,8 @@
 The `$style` variable can be either of the following:
 - `solid`
 
-**_Note_**: The `$style` variable is optional.
+The `$position` variable can be either of the following:
+- `centered`
+- `right`
+
+**_Note_**: The `$style` and $position variables are optional.
