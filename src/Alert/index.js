@@ -11,7 +11,6 @@ const Alert = ({
     danger,
     light,
     dark,
-    outline,
     className,
     ...attributes
 }) => {
@@ -22,8 +21,7 @@ const Alert = ({
         'make-warning': warning,
         'make-danger': danger,
         'make-light': light,
-        'make-dark': dark,
-        'make-outline': outline
+        'make-dark': dark
     }, className);
 
     return (
@@ -43,8 +41,7 @@ Alert.propTypes = {
     danger: PropTypes.bool,
     light: PropTypes.bool,
     dark: PropTypes.bool,
-    reverse: PropTypes.bool,
-    outline: PropTypes.bool
+    reverse: PropTypes.bool
 };
 
 export default Alert;

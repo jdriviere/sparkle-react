@@ -7,15 +7,10 @@ import Body from './MediaBody';
 
 const Media = ({
     children,
-    reverse,
-    center,
     className,
     ...attributes
 }) => {
-    const classes = classNames('media', {
-        'make-reverse': reverse,
-        'make-center': center
-    }, className);
+    const classes = classNames('media', className);
     
     return (
         <div className={classes} {...attributes}>
@@ -29,8 +24,6 @@ Media.Body = Body;
 
 Media.propTypes = {
     children: PropTypes.any,
-    reverse: PropTypes.bool,
-    center: PropTypes.bool,
     className: PropTypes.string
 };
 

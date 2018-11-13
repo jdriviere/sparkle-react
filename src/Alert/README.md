@@ -1,7 +1,7 @@
 # Alert
 
 ```jsx
-<Alert $style [outline]>
+<Alert $style>
     // Children elements go here...
 </Alert>
 ```
@@ -14,5 +14,3 @@ The `$style` variable can be either of the following:
 - `danger`
 - `light`
 - `dark`
-
-**_Note_**: The variable `outline` is optional.
