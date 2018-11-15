@@ -1,7 +1,7 @@
-# Buttons
+# Button
 
 ```jsx
-<Button $style $modifier $size $roundess>
+<Button $style $modifier $size $roundess href="#">
     // Children elements go here...
 </Button>
 ```
@@ -32,6 +32,6 @@ The `$roundness` variable can be either of the following:
 - `radial`
 - `round`
 
-**_Note_**: The `$style`, `$modifier`, `$size`, and `$roundness` variables are optional.
-Furthermore, the `$style` values `outline` and `reverse` can also be combined together (no
-other `$style` combinations can be made).
+**_Note_**: The `$style`, `$modifier`, `$size`, `$roundness`, and `href` properties are optional.
+Furthermore, the `$style`, `outline`, and `reverse` properties can also be combined together (no other
+combinations can be made).

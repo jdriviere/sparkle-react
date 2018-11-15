@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import Column from './GridColumn';
+import Column from './Column';
 
 const Columns = ({
     children,
