@@ -27,6 +27,7 @@ Menu.Item = Item;
 
 Menu.propTypes = {
     children: PropTypes.any,
+    right: PropTypes.bool,
     className: PropTypes.string
 };
 
