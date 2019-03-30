@@ -2,14 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import Item from './CardFooterItem';
-
 const Footer = ({
     children,
     className,
     ...attributes
 }) => {
-    const classes = classNames('card__footer', className);
+    const classes = classNames('card-footer', className);
 
     return (
         <footer className={classes} {...attributes}>
@@ -17,8 +15,6 @@ const Footer = ({
         </footer>
     );
 }
-
-Footer.Item = Item;
 
 Footer.propTypes = {
     children: PropTypes.any,

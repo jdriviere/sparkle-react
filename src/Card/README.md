@@ -2,26 +2,20 @@
 
 ```jsx
 <Card>
+    <Card.Body.Image src={...} alt={...}/>
+    
     <Card.Header>
-        <Card.Header.Title>Title</Card.Header.Title>
-        <Card.Header.Subtitle>Subtitle</Card.Header.Subtitle>
+        // Children elements go there...
     </Card.Header>
     
     <Card.Body>
-        <Card.Body.Image src={...} alt={...}/>
         // Children elements go there...
     </Card.Body>
     
     <Card.Footer>
-        <Card.Footer.Item>
-            // Children elements go here...
-        </Card.Footer.Item>
-        <Card.Footer.Item>
-            // Children elements go here...
-        </Card.Footer.Item>
-        ...
+        // Children elements go here...
     </Card.Footer>
 </Card>
 ```
 
-**_Note_**: The `Card.Body.Image` is a self-closing element, and the `src` is mandatory.
+**_Note_**: The `Card.Body.Image` is a self-closing element, and the `src` is mandatory. It can also be placed anywhere within the `Card` component.

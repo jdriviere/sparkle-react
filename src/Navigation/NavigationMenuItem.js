@@ -9,7 +9,7 @@ const Item = ({
     className,
     ...attributes
 }) => {
-    const classes = classNames('nav__menu__item',
+    const classes = classNames('nav-menu-item',
     {
         'make-active': active,
         'make-special': special
@@ -17,9 +17,9 @@ const Item = ({
     className);
     
     return (
-        <div className={classes} {...attributes}>
+        <li className={classes} {...attributes}>
             {children}
-        </div>
+        </li>
     );
 };
 

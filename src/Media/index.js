@@ -13,9 +13,9 @@ const Media = ({
     const classes = classNames('media', className);
     
     return (
-        <div className={classes} {...attributes}>
+        <article className={classes} {...attributes}>
             {children}
-        </div>
+        </article>
     );
 };
 

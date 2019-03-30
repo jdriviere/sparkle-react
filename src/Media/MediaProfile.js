@@ -9,12 +9,12 @@ const Profile = ({
     className,
     ...attributes
 }) => {
-    const classes = classNames('media__profile', className);
+    const classes = classNames('media-profile', className);
 
     return (
-        <div className={classes} {...attributes}>
+        <aside className={classes} {...attributes}>
             {children}
-        </div>
+        </aside>
     );
 }
 

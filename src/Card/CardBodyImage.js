@@ -8,7 +8,7 @@ const Image = ({
     className,
     ...attributes
 }) => {
-    const classes = classNames('card__image', className);
+    const classes = classNames('card-image', className);
 
     return (
         <img className={classes} {...attributes} src={src} alt={alt} />

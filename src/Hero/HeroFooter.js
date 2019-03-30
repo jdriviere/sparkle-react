@@ -7,7 +7,7 @@ const Footer = ({
     className,
     ...attributes
 }) => {
-    const classes = classNames('hero__footer', className);
+    const classes = classNames('hero-footer', className);
 
     return (
         <footer className={classes} {...attributes}>

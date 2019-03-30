@@ -17,8 +17,8 @@ const Navigation = ({
     
     return (
         <div className={classes} {...attributes}>
-            <input type="checkbox" id="nav__trigger"/>
-            <label className="nav__toggle" htmlFor="nav__trigger"></label>
+            <input type="checkbox" id="nav-trigger"/>
+            <label className="nav-toggle" htmlFor="nav-trigger"></label>
             {children}
         </div>
     );

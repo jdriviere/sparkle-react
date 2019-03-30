@@ -5,11 +5,13 @@
     <Navigation.Brand>
         // Child element goes here
     </Navigation.Brand>
+    
     <Navigation.Menu>
         <Navigation.Menu.Item active><a href="#">active</a></Navigation.Menu.Item>
         <Navigation.Menu.Item><a href="#">item 2</a></Navigation.Menu.Item>
         <Navigation.Menu.Item><a href="#">item 3</a></Navigation.Menu.Item>
     </Navigation.Menu>
+    
     <Navigation.Menu right>
         // Children elements go here
     </Navigation.Menu>

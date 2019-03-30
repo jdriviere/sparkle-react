@@ -7,7 +7,7 @@ const Body = ({
     className,
     ...attributes
 }) => {
-    const classes = classNames('hero__body', className);
+    const classes = classNames('hero-body', className);
 
     return (
         <section className={classes} {...attributes}>

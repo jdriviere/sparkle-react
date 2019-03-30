@@ -12,7 +12,7 @@ const Loader = ({
     light,
     dark,
     large,
-    xLarge,
+    larger,
     className,
     ...attributes
 }) => {
@@ -25,7 +25,7 @@ const Loader = ({
         'make-light': light,
         'make-dark': dark,
         'make-large': large,
-        'make-xlarge': xLarge
+        'make-larger': larger
     }, className);
 
     return (
@@ -44,7 +44,7 @@ Loader.propTypes = {
     light: PropTypes.bool,
     dark: PropTypes.bool,
     large: PropTypes.bool,
-    xLarge: PropTypes.bool
+    larger: PropTypes.bool
 };
 
 export default Loader;

@@ -9,7 +9,7 @@ const Body = ({
     className,
     ...attributes
 }) => {
-    const classes = classNames('card__body', className);
+    const classes = classNames('card-body', className);
 
     return (
         <section className={classes} {...attributes}>

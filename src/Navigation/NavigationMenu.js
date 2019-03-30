@@ -10,16 +10,16 @@ const Menu = ({
     className,
     ...attributes
 }) => {
-    const classes = classNames('nav__menu',
+    const classes = classNames('nav-menu',
     {
         'make-right': right
     },
     className);
     
     return (
-        <div className={classes} {...attributes}>
+        <ul className={classes} {...attributes}>
             {children}
-        </div>
+        </ul>
     );
 };
 

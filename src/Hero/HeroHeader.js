@@ -7,7 +7,7 @@ const Header = ({
     className,
     ...attributes
 }) => {
-    const classes = classNames('hero__header', className);
+    const classes = classNames('hero-header', className);
 
     return (
         <header className={classes} {...attributes}>

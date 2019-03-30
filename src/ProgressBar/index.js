@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const Tag = ({
+const Progress = ({
     children,
+    value,
+    max,
     primary,
     info,
     success,
@@ -11,13 +13,10 @@ const Tag = ({
     danger,
     light,
     dark,
-    outlined,
-    reversed,
-    bullet,
     className,
     ...attributes
 }) => {
-    const classes = classNames('tag', {
+    const classes = classNames('progress', {
         'make-primary': primary,
         'make-info': info,
         'make-success': success,
@@ -25,19 +24,19 @@ const Tag = ({
         'make-danger': danger,
         'make-light': light,
         'make-dark': dark,
-        'make-reversed': reversed,
-        'make-outlined': outlined,
-        'make-bullet': bullet
     }, className);
 
     return (
-        <span className={classes} {...attributes}>{children}</span>
+        <progress className={classes} {...attributes} value={value} max={max}>
+            {children}
+        </progress>
     );
-};
+}
 
-Tag.propTypes = {
+Image.propTypes = {
     children: PropTypes.any,
-    className: PropTypes.string,
+    value: PropTypes.string.isRequired,
+    max: PropTypes.string.isRequired,
     primary: PropTypes.bool,
     info: PropTypes.bool,
     success: PropTypes.bool,
@@ -45,10 +44,7 @@ Tag.propTypes = {
     danger: PropTypes.bool,
     light: PropTypes.bool,
     dark: PropTypes.bool,
-    reverse: PropTypes.bool,
-    outline: PropTypes.bool,
-    radial: PropTypes.bool,
-    bullet: PropTypes.bool,
+    className: PropTypes.string
 };
 
-export default Tag;
+export default Progress;

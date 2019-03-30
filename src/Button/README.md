@@ -16,16 +16,15 @@ The `$style` variable can be either of the following:
 - `dark`
 
 The `$modifier` variable can be either of the following:
-- `outline`
-- `reverse`
+- `outlined`
+- `reversed`
 - `link`
 
 The `$size` variable can be either of the following:
-- `xsmall`
+- `smaller`
 - `small`
-- `medium` (also the default size)
 - `large`
-- `xlarge`
+- `larger`
 - `block`
 
 The `$roundness` variable can be either of the following:

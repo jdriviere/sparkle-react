@@ -7,7 +7,7 @@ const Footer = ({
     className,
     ...attributes
 }) => {
-    const classes = classNames('blockquote__footer', className);
+    const classes = classNames('blockquote-footer', className);
     return (
         <footer className={classes} {...attributes}>
             {children}

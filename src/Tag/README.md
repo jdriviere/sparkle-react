@@ -1,7 +1,7 @@
 # Tag
 
 ```jsx
-<Tag $style $extra>
+<Tag $style $modifier>
     // Child element go here...
 </Tag>
 ```
@@ -15,8 +15,8 @@ The `$style` variable can be either of the following:
 - `light`
 - `dark`
 
-The `$extra` variable can be either of the following:
-- `outline`
-- `reverse`
+The `$modifier` variable can be either of the following:
+- `outlined`
+- `reversed`
 
-**_Note_**: The `$style` and `$extra` variables are optional.
+**_Note_**: The `$style` and `$modifier` variables are optional.

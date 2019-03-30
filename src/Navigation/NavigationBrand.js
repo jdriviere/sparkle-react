@@ -7,7 +7,7 @@ const Brand = ({
     className,
     ...attributes
 }) => {
-    const classes = classNames('nav__brand', className);
+    const classes = classNames('nav-brand', className);
     
     return (
         <div className={classes} {...attributes}>

@@ -15,6 +15,6 @@ The `$style` variable can be either of the following:
 
 The `$size` variable can be either of the following:
 - `large`
-- `xLarge`
+- `larger`
 
-**_Note_**: The `$size` and `$size` variables are optional.
+**_Note_**: The `$style` and `$size` variables are optional.

@@ -5,11 +5,8 @@
     <Media.Profile>
         <Media.Profile.Image src={...} alt={...}/>
     </Media.Profile>
-    <Media.Body>
-        <Media.Body.Title>Title</Media.Body.Title>
-        <Media.Body.Subtitle>Subtitle</Media.Body.Subtitle>
-        <Media.Body.Timestamp>Timestamp</Media.Body.Timestamp>
-        
+    
+    <Media.Body>        
         // Children elements go there...
     </Media.Body>
 </Media>
