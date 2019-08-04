@@ -15,9 +15,9 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-hot-loader": "^4.8.7",
+    "react-hot-loader": "^4.12.10",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^2.1.8",
+    "react-scripts": "^3.0.1",
     "styled-components": "^3.4.10"
   },
   "devDependencies": {
@@ -29,8 +29,8 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.1",
     "style-loader": "^0.21.0",
-    "webpack": "^4.32.0",
-    "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.4.1"
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
   }
 }
